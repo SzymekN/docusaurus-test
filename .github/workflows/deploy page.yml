@@ -17,7 +17,10 @@ jobs:
     defaults:
       run:
         working-directory: ./docs
-    steps:
+    steps:    
+      - name: Where
+        working-directory: ./docs
+        run: "echo pwd"    
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
